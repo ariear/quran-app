@@ -1,13 +1,14 @@
 # Quran App
 
 Assalamualaikum Wr. Wb. 
+
   Halo semua 👋 , masih di bulan ramadhan ini saya mau memperkenalkan project saya , yap quran app , sebuah web app yang berisikan bacaan al-quran , jadwal sholat sesuai kota , hadist (on progress) , semua data saya ambil dari public API
   
   Tools & Libraries yang digunakan :
-    - Vue Js
-    - Tailwind CSS
-    - PWA
-    - Public API
+  - Vue Js
+  - Tailwind CSS
+  - PWA
+  - Public API
     
 ![getstartquran](https://user-images.githubusercontent.com/91861324/163695400-0f7ea7ae-5ce6-45b5-b7c3-3601503c96e9.png)
 
