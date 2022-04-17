@@ -60,9 +60,11 @@
         <div v-else v-for="(surah, index) in getSurah.verses" :key="index" class="mb-7">
             <div class="bg-[#152451] dark:bg-slate-200 rounded-xl py-3 px-3 flex justify-between mb-4 relative">
                 <p class="bg-[#A44AFF] w-max py-2 px-4 text-sm rounded-full text-white">{{ surah.number.inSurah }}</p>
-
+<audio controls class="suaraNgaji hidden">
+  <source :src="surah.audio.primary" type="audio/mpeg">
+</audio>
                 <div class="flex items-center">
-                    <img src="/img/play.svg" @click="(event) => audioquran(event,surah.audio.primary, event)" alt="">
+                    <img src="/img/play.svg" @click="playOrPause(index)" alt="">
                     <img src="/img/wishlist.svg" @click="lastread(surah.number.inSurah , getSurah.name.transliteration.id)" class="ml-4" alt="">
                 </div>
             </div>
@@ -107,11 +109,6 @@ export default {
                 this.loadingayat = true
             }
         },
-        audioquran(event,audioquran){
-            this.putarBacaan = true
-            let audio = new Audio(`${audioquran}`)
-            audio.play()
-        },
         lastread(surat, namaSurah){
             this.tersimpan = true
             localStorage.setItem('lastread', JSON.stringify({
@@ -122,6 +119,15 @@ export default {
             setTimeout(() => {
                 this.tersimpan = false
             }, 2000);
+        },
+        playOrPause(index){
+            let suaraNgaji = document.querySelectorAll('.suaraNgaji')
+            let ngaji = suaraNgaji[index] 
+            if (!ngaji.paused && !ngaji.ended) {
+                ngaji.pause()
+            }else{
+                ngaji.play()
+            }
         }
     },
     mounted() {
