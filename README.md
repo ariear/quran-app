@@ -1,4 +1,4 @@
-# Quran App
+# <a href="https://app-quran.netlify.app/">Quran App<a/>
 
 Assalamualaikum Wr. Wb. 
 
