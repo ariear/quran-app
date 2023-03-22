@@ -11,8 +11,7 @@
   <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform></g></svg>
   <p class="font-pupylinux text-center text-white dark:text-black" v-if="tidakAda">Kota tidak ditemukan</p>
   <div v-else>
-    <p class="mb-2 text-white dark:text-black text-2xl">{{ getKota.city }}</p>
-    <p class="text-white dark:text-black mb-5">{{ getKota.country }}</p>
+    <p class="mb-2 text-white dark:text-black text-2xl">{{ getKota }}</p>
     <div v-for="(jadwal , index) in dataJadwalSholat" :key="index" class="bg-[#152451] dark:bg-slate-200 dark:text-black text-white p-4 rounded-xl mb-4 flex items-center justify-between">
       <p>{{ index }}</p>
       <p>{{ jadwal }}</p>
