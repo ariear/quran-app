@@ -37,10 +37,10 @@ export default {
     async getJadwalSholat(){
       try {      
         this.loadingjadwal = true  
-        await axios.get(`https://api.pray.zone/v2/times/today.json?city=${this.kota}`)
+        await axios.get(`https://dailyprayer.abdulrcs.repl.co/api/${this.kota}`)
                   .then(response => {
-                    this.dataJadwalSholat = response.data.results.datetime[0].times
-                    this.getKota = response.data.results.location
+                    this.dataJadwalSholat = response.data.today
+                    this.getKota = response.data.city
                     if (response.status == 200) {
                       this.loadingjadwal = false
                     }
