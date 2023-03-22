@@ -62,7 +62,7 @@ export default {
     async resquran(){
       try {       
         this.loadingQuran = true 
-        await axios.get('https://quran-api-arie.herokuapp.com/surah')
+        await axios.get('https://api.quran.gading.dev/surah')
           .then(response => {
             this.getdataquran = response.data.data
             if (response.status == 200) {

@@ -95,7 +95,7 @@ export default {
         async metGetSurah(){
             try {        
                 this.loadingayat = true        
-                await axios.get(`https://quran-api-arie.herokuapp.com/surah/${this.$route.params.id}`)
+                await axios.get(`https://api.quran.gading.dev/surah/${this.$route.params.id}`)
                     .then(response => {
                         this.getSurah = response.data.data
                         this.namaSurah = this.getSurah.name.transliteration.id
