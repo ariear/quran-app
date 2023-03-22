@@ -36,6 +36,8 @@ export default {
   methods: {
     async getJadwalSholat(){
       try {      
+        this.dataJadwalSholat = []
+        this.getKota = ''
         this.loadingjadwal = true  
         await axios.get(`https://dailyprayer.abdulrcs.repl.co/api/${this.kota}`)
                   .then(response => {
