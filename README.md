@@ -2,7 +2,7 @@
 
 Assalamualaikum Wr. Wb. 
 
-  Hello everyone 👋 , This website is useful for those of you who wanna read the book of the Koran, you can also see the list prayer time
+  Hello everyone 👋 , This website is useful for those of you who wanna read the book of the Quran, you can also see the list prayer time
   
   Tech stack that i use :
   - Vue Js
